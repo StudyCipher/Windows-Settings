@@ -1,10 +1,12 @@
 Write-Host "This delete all your DNS then adds well know encrypted DNS to your Windows system."
 
+# Google DNS (US, available in most countries):
 Add-DnsClientDohServerAddress -ServerAddress "8.8.8.8" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "8.8.4.4" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2001:4860:4860::88881" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2001:4860:4860::8844" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 
+# Cloudflare DNS (US, available in most countries):
 Add-DnsClientDohServerAddress -ServerAddress "1.1.1.1" -DohTemplate "https://cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "1.0.0.1" -DohTemplate "https://cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2606:4700:4700::1111" -DohTemplate "https://cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -20,6 +22,7 @@ Add-DnsClientDohServerAddress -ServerAddress "1.0.0.3" -DohTemplate "https://fam
 Add-DnsClientDohServerAddress -ServerAddress "2606:4700:4700::1113" -DohTemplate "https://family.cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2606:4700:4700::1003" -DohTemplate "https://family.cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 
+# Quad9 DNS (Swiss made by London Metropolitan Police, available in most countries):
 Add-DnsClientDohServerAddress -ServerAddress "9.9.9.9" -DohTemplate "https://dns.quad9.net/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "149.112.112.112" -DohTemplate "https://dns.quad9.net/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2620:fe::fe" -DohTemplate "https://dns.quad9.net/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -30,6 +33,7 @@ Add-DnsClientDohServerAddress -ServerAddress "149.112.112.11" -DohTemplate "http
 Add-DnsClientDohServerAddress -ServerAddress "2620:fe::11" -DohTemplate "https://dns11.quad9.net/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2620:fe::fe:11" -DohTemplate "https://dns11.quad9.net/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 
+# ControlD DNS (Canadian, available in most countries):
 Add-DnsClientDohServerAddress -ServerAddress "76.76.2.2" -DohTemplate "https://freedns.controld.com/p2" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "76.76.10.2" -DohTemplate "https://freedns.controld.com/p2" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2606:1a40::2" -DohTemplate "https://freedns.controld.com/p2" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -40,6 +44,7 @@ Add-DnsClientDohServerAddress -ServerAddress "76.76.10.4" -DohTemplate "https://
 Add-DnsClientDohServerAddress -ServerAddress "2606:1a40::4" -DohTemplate "https://freedns.controld.com/family" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2606:1a40:1::4" -DohTemplate "https://freedns.controld.com/family" -AutoUpgrade $true -AllowFallbackToUdp $false
 
+# dns.forge.de DNS (Servers only in Germany):
 Add-DnsClientDohServerAddress -ServerAddress "49.12.67.122" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "91.99.154.175" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "176.9.93.198" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -59,6 +64,7 @@ Add-DnsClientDohServerAddress -ServerAddress "88.198.122.154" -DohTemplate "http
 Add-DnsClientDohServerAddress -ServerAddress "2a01:4f8:c17:2c61::213" -DohTemplate "https://hard.dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2a01:4f8:c013:5ec0::154" -DohTemplate "https://hard.dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 
+# Xdp.es DNS (Servers only in Spain):
 Add-DnsClientDohServerAddress -ServerAddress "85.208.114.51" -DohTemplate "https://dns.xdp.es/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "51.170.52.10" -DohTemplate "https://dns.xdp.es/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2a0e:97c0:c40::51" -DohTemplate "https://dns.xdp.es/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
