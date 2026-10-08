@@ -10,6 +10,7 @@ Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
 Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
 Write-Host "List Execution current Policies"
 Get-ExecutionPolicy -List
+gpupdate.exe /force
 Write-Host "Script Policies finished"
 Write-Host "You can choose to restart the computer (Recommended)"
 Restart-Computer -Confirm
