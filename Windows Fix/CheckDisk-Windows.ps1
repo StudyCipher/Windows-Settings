@@ -1,4 +1,5 @@
-﻿Write-Host "This script is beginning. Disk from A to C, can prompt to schedule a restart"
+﻿# This is all DISK in alphabetical order.
+# It will check, fix most disk issues.
 chkdsk a: /f /r /x
 chkdsk b: /f /r /x
 chkdsk c: /f /r /x
@@ -25,6 +26,6 @@ chkdsk w: /f /r /x
 chkdsk x: /f /r /x
 chkdsk y: /f /r /x
 chkdsk z: /f /r /x
-Write-Host "This script finished, you need to restart device to confirm disk repair"
-Write-Host "You can choose to restart the computer (Recommended)"
+
+# Is recommended to restart or reboot the system.
 Restart-Computer -Confirm
