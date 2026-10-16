@@ -1,3 +1,8 @@
+# THIS IS RECOMMENDED ONLY FOR PROFESSIONALS AND ENTUSIACTICS PEOPLE.
+# Windows Package Manager and Windows Package Manager Community Repository (Winget).
+# This is like APT or DNF in Linux and Homebrew for MacOS.
+# You should check and verify commands (Like CMD) checksum before running anything.
+
 # List Winget programs:
 winget list
 
