@@ -1,8 +1,14 @@
-﻿# This is all DISK in alphabetical order.
+# This is all DISK in alphabetical order.
 # It will check, fix most disk issues.
+
+# Letters A to C are legacy and sytem disks (May require restart).
+# Best to rund each line independently.
 chkdsk a: /f /r /x
 chkdsk b: /f /r /x
 chkdsk c: /f /r /x
+
+# Third party disks, usually not system letters.
+# Do not matter to execute (Can take hours even days to terminate all lines).
 chkdsk d: /f /r /x
 chkdsk e: /f /r /x
 chkdsk f: /f /r /x
@@ -27,5 +33,5 @@ chkdsk x: /f /r /x
 chkdsk y: /f /r /x
 chkdsk z: /f /r /x
 
-# Is recommended to restart or reboot the system.
+# This resatrt or reboot the sytem (Recommended).
 Restart-Computer -Confirm
