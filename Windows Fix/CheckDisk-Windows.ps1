@@ -1,3 +1,4 @@
+# THIS IS RECOMMENDED ONLY FOR PROFESSIONALS AND ENTUSIACTICS PEOPLE.
 # This is all DISK in alphabetical order.
 # It will check, fix most disk issues.
 
