@@ -1,6 +1,6 @@
 # This is to add or update DNS servers to the system database.
 # "Add-DnsClientDohServerAddress" is to add to the database and "Set-DnsClientDohServerAddress" is to update current values to script defined values.
-#
+
 # Link: https://www.reddit.com/r/PowerShell/comments/y6ev8g/setdnsclientserveraddress_with_force_reqd/.
 # https://www.reddit.com/r/Windows11/comments/pd0qn4/dnsoverhttps_cannot_be_enabled/.
 # https://superuser.com/questions/1745802/enable-encryption-for-doh-on-win11-22h2
