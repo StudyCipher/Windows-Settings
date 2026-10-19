@@ -1,7 +1,9 @@
 ## Link: https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config
 # I discorage to use "w32tm /unregister" & "w32tm /register" may reset your settings in Windows regestry.
 
-## This script is to set up NTP servers databse for Windows. Default server is windows.time.
+## This script is to set up NTP servers databse for Windows.
+## Default server in Windows are "time.windows.com" & "time.nist.gov".
+
 ## Link: https://github.com/EvotecIT/PSSharedGoods/issues/23
 # These are most values that have Windows NTP service:
 #'0x01' = 'SpecialInterval'
