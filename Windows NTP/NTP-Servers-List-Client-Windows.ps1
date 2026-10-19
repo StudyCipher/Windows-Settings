@@ -3,6 +3,7 @@
 
 ## This script is to set up NTP servers databse for Windows.
 ## Default server in Windows are "time.windows.com" & "time.nist.gov".
+## In Windows you can use a pool of servers like "ntp.pool.org", individual servers and ip (Like local NTP server).
 
 ## Link: https://github.com/EvotecIT/PSSharedGoods/issues/23
 # These are most values that have Windows NTP service:
@@ -91,6 +92,7 @@ net stop w32time & net start w32time
 
 # This is going to set up list of NTP servers (In ip addreses).
 # LIMIT is 6 servers at the same time.
+# THESE ARE GOOGLE NTP in IPv4 and IPv6 address do DNS lookup for "time.google.com".
 # This means w32tm /config /manualpeerlist is your NTP servers.
 # This means /syncfromflags:manual is for says you made it, not the computer itself.
 # This means /reliable:no is related to servers, if you want to set up your own NTP server you should say "yes", otherwise "no".
