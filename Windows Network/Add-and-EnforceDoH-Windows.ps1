@@ -5,9 +5,9 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows NT\DNSClient\"
 Get-ItemProperty -Path Registry::"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient\" -Name "DoHPolicy"
 
 # It will apply automatic setting to encrypted protocols.
-# Possible options: Enabled, Disabled, Auto.
+# Possible options: Enabled, Disabled (no), Auto.
 netsh dns add global doh=auto
-netsh dns add global dot=auto
+netsh dns add global dot=no
 
 # This is going to apply system policies without need to restart.
 gpupdate.exe /force
