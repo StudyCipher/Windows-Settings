@@ -70,6 +70,10 @@ w32tm /config /manualpeerlist:"time1.google.com,0x9 time2.google.com,0x9 time3.g
 # This will stop and start Windows Time service.
 net stop w32time & net start w32time
 # This will sync to your set configuration.
+# To sync Windows Time service:
+w32tm /resync
+w32tm /resync /rediscover
+# To force sync Windows Time service
 w32tm /resync /force
 # It will display Windows Time query (NTP server) status. 
 w32tm /query /status
