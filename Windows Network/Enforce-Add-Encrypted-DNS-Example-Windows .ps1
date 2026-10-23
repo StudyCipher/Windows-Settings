@@ -5,9 +5,13 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows NT\DNSClient\"
 Get-ItemProperty -Path Registry::"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient\" -Name "DoHPolicy"
 
 # It will apply automatic setting to encrypted protocols.
-# Possible options: Enabled, Disabled, Auto.
+# Possible options: Enabled, Disabled (no), Auto.
 netsh dns add global doh=auto
 netsh dns add global dot=no
+
+# Shows DNS over HTTPS and DNS over TLS settings.
+netsh dns show global
+
 
 ## Example 1:
 # Add DNS over HTTPS to Windows sytems on PowerShell command.
