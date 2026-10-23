@@ -1,5 +1,8 @@
 # This is to remove all DNS servers saved on the system (Draft).
-
+Get-DnsClientDohServerAddress |
+    ForEach-Object {
+        Remove-DnsClientDohServerAddress -ServerAddress $_.ServerAddress
+    }
 
 # This is to flush DNS cache.
 ipconfig /flushdns
