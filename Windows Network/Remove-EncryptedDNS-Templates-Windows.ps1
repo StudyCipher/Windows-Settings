@@ -18,5 +18,8 @@ gpupdate.exe /force
 # This is to flush DNS cache.
 ipconfig /flushdns
 
+# This shows if any encrypted DNS template still there.
+Get-DNSClientDohServerAddress | Sort-Object -Property DohTemplate
+
 # Restart is recommended stand still.
 Restart-Computer -Confirm
