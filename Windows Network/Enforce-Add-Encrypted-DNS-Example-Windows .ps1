@@ -12,6 +12,9 @@ netsh dns add global dot=no
 # Shows DNS over HTTPS and DNS over TLS settings.
 netsh dns show global
 
+# This is going to apply system policies without need to restart.
+gpupdate.exe /force
+
 
 ## Example 1:
 # Add DNS over HTTPS to Windows sytems on PowerShell command.
@@ -41,6 +44,9 @@ Clear-DnsClientCache
 # Display all encrypted DNS templates from the sytem.
 Get-DNSClientDohServerAddress | Sort-Object -Property DohTemplate
 
+# This is going to apply system policies without need to restart.
+gpupdate.exe /force
+
 
 ## Example 2:
 # Add DNS over HTTPS to Windows sytems on PowerShell command.
@@ -64,3 +70,6 @@ Clear-DnsClientCache
 
 # Display all encrypted DNS templates from the sytem.
 Get-DNSClientDohServerAddress | Sort-Object -Property DohTemplate
+
+# This is going to apply system policies without need to restart.
+gpupdate.exe /force
