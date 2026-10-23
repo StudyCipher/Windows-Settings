@@ -3,7 +3,7 @@
 # It will check, fix most disk issues.
 
 # Letters A to C are legacy and sytem disks (May require restart).
-# Best to rund each line independently.
+# Best to run each line independently.
 chkdsk a: /f /r /x
 chkdsk b: /f /r /x
 chkdsk c: /f /r /x
