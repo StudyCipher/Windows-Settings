@@ -91,7 +91,7 @@ Set-DnsClientDohServerAddress -ServerAddress "76.76.10.4" -DohTemplate "https://
 Set-DnsClientDohServerAddress -ServerAddress "2606:1a40::4" -DohTemplate "https://freedns.controld.com/family" -AutoUpgrade $true -AllowFallbackToUdp $false
 Set-DnsClientDohServerAddress -ServerAddress "2606:1a40:1::4" -DohTemplate "https://freedns.controld.com/family" -AutoUpgrade $true -AllowFallbackToUdp $false
 
-# dns.forge.de DNS (Servers only in Germany):
+# dns.forge.de DNS (Servers only available in Germany):
 Add-DnsClientDohServerAddress -ServerAddress "49.12.67.122" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "91.99.154.175" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "176.9.93.198" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -130,7 +130,7 @@ Set-DnsClientDohServerAddress -ServerAddress "88.198.122.154" -DohTemplate "http
 Set-DnsClientDohServerAddress -ServerAddress "2a01:4f8:c17:2c61::213" -DohTemplate "https://hard.dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Set-DnsClientDohServerAddress -ServerAddress "2a01:4f8:c013:5ec0::154" -DohTemplate "https://hard.dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 
-# Xdp.es DNS (Servers only in Spain):
+# Xdp.es DNS (Servers only available in Spain):
 Add-DnsClientDohServerAddress -ServerAddress "85.208.114.51" -DohTemplate "https://dns.xdp.es/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "51.170.52.10" -DohTemplate "https://dns.xdp.es/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2a0e:97c0:c40::51" -DohTemplate "https://dns.xdp.es/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
