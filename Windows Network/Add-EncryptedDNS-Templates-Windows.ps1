@@ -6,6 +6,18 @@
 # https://superuser.com/questions/1745802/enable-encryption-for-doh-on-win11-22h2
 # https://learn.microsoft.com/en-us/answers/questions/5548939/set-dns-provider-with-powershell
 # https://woshub.com/enable-dns-over-https-windows/
+# https://controld.com/blog/how-to-set-up-control-d-on-windows/
+
+
+# 1) My parameters for these DNS are:
+# 1.2) Encrytion by default.
+# 1.3) DNSSEC validation.
+# 1.4) TLS 1.3 by default.
+# 1.5) Secure SNI by default.
+
+# 2) Optional parameters:
+# 2.1) Post-quantum or ML-DSA-44 by default.
+# 2.2) Filters active (Malware, ads, trackers, adult content, drug sites and piracy).
 
 # Google DNS (US, available in most countries):
 Add-DnsClientDohServerAddress -ServerAddress "8.8.8.8" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -18,7 +30,7 @@ Set-DnsClientDohServerAddress -ServerAddress "8.8.4.4" -DohTemplate "https://dns
 Set-DnsClientDohServerAddress -ServerAddress "2001:4860:4860::88881" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Set-DnsClientDohServerAddress -ServerAddress "2001:4860:4860::8844" -DohTemplate "https://dns.google/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 
-# Cloudflare DNS (US, available in most countries):
+# Cloudflare DNS (US, available in most countries & ML-DSA-44 by default):
 Add-DnsClientDohServerAddress -ServerAddress "1.1.1.1" -DohTemplate "https://cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "1.0.0.1" -DohTemplate "https://cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "2606:4700:4700::1111" -DohTemplate "https://cloudflare-dns.com/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
@@ -91,7 +103,7 @@ Set-DnsClientDohServerAddress -ServerAddress "76.76.10.4" -DohTemplate "https://
 Set-DnsClientDohServerAddress -ServerAddress "2606:1a40::4" -DohTemplate "https://freedns.controld.com/family" -AutoUpgrade $true -AllowFallbackToUdp $false
 Set-DnsClientDohServerAddress -ServerAddress "2606:1a40:1::4" -DohTemplate "https://freedns.controld.com/family" -AutoUpgrade $true -AllowFallbackToUdp $false
 
-# dns.forge.de DNS (Servers only available in Germany):
+# dns.forge.de DNS (Servers only available in Germany and WebRTC protection enabled):
 Add-DnsClientDohServerAddress -ServerAddress "49.12.67.122" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "91.99.154.175" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
 Add-DnsClientDohServerAddress -ServerAddress "176.9.93.198" -DohTemplate "https://dnsforge.de/dns-query" -AutoUpgrade $true -AllowFallbackToUdp $false
