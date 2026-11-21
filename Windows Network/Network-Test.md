@@ -13,11 +13,13 @@ https://dnsleaktest.com/
 https://ipleak.net/
 https://mullvad.net/en/check
 https://www.top10vpn.com/tools/what-is-my-dns-server/
+https://ipcheck.ing/
 
-4) WebRTC leak Test:
+5) WebRTC leak Test:
 https://browserleaks.com/webrtc
 https://ipleak.net/
 https://mullvad.net/en/check
+https://ipcheck.ing/
 
-5) Post-quantum / ML-DSA-44 validation (Most will fail* for the reason to be new signature algorithm):
+6) Post-quantum / ML-DSA-44 validation (Most will fail* for the reason to be new signature algorithm):
 https://dnstest.dev/post-quantum/
